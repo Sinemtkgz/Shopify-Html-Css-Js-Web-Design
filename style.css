@@ -1,0 +1,155 @@
+@import url('https://fonts.googleapis.com/css2?family=Gochi+Hand&family=Montserrat:wght@300;400;500&display=swap');
+
+:root {
+  --first-font: 'Montserrat', sans-serif;
+  --second-font: 'Gochi Hand', cursive;
+}
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--first-font);
+}
+
+a {
+  text-decoration: none;
+}
+
+.container {
+  background: linear-gradient(90deg, #b7b78a 50%, #3c6255 50%);
+  /* arkaplanın yarısı açık yeşil diğer yarısı koyu yeşil oldu */
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.wrapper {
+  background-color: #dddddd;
+  width: 90%;
+  height: 90vh;
+}
+
+.navbar {
+  width: 90%;
+  margin: auto;
+  height: 15vh;
+}
+
+.navbar .logo {
+  width: 60px;
+  height: 60px;
+  background-color: transparent;
+  border: 2px solid #3c6255;
+  border-radius: 50%;
+  border-right-color: transparent;
+  position: relative;
+}
+
+.navbar .logo::before {
+  content: 'Shopify';
+  color: black;
+  font-size: 30px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-10%, -50%);
+  font-family: var(--second-font)
+}
+
+.navbar,
+.nav-list {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-item {
+  list-style: none;
+  padding: 20px;
+}
+
+.nav-link {
+  color: black;
+  font-size: 20px;
+}
+
+.nav-list a {
+  position: relative;
+}
+
+.nav-list a::before {
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: black;
+  transition: .5s ease-in-out;
+}
+
+.nav-list a:hover::before {
+  width: 100%;
+}
+
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+}
+
+.hero img {
+  width: 45vw;
+}
+
+.content {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+  gap: 20px;
+  border-left: 4px solid #3c6255;
+  padding: 20px 50px;
+}
+
+.content h3 {
+  color: rgb(73, 73, 73);
+  font-size: 25px;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  font-family: var(--second-font);
+}
+
+.content h1 {
+  color: #3c6255;
+  font-size: 40px;
+}
+
+.content p {
+  color: black;
+  font-size: 18px;
+  line-height: 30px;
+}
+
+.content button {
+  padding: 15px 30px;
+  font-size: 18px;
+  color: white;
+  border: none;
+  background-color: #3c6255;
+  cursor: pointer;
+  border-radius: 100% 0% 100% 0% / 10% 89% 11% 90%;
+}
+
+.content button:hover {
+  background-color: white;
+  color: #3c6255;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.4);
+}
